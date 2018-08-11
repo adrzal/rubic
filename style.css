@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.sciana{
+    position: absolute;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    line-height: 200px;
+    text-align: center;
+    color: white;
+}
+
+#scena{
+    width: 200px;
+    height: 200px;
+    margin: 200px;
+    position: relative;
+    perspective: 1000px;
+}
+
+#kostka{
+    position: absolute;
+    transform-style: preserve-3d;
+     width: 100%;
+    height: 100%;
+    animation: anime 3s infinite alternate;
+}
+
+@keyframes anime{
+    from{
+        
+    }
+    to{
+        transform: rotateX(90deg) rotateY(45deg);
+    }
+}
+
+.front{
+    background-color: red;
+    transform: translateZ(100px);
+}
+.back{
+    background-color: blue;
+    transform: translateZ(-100px);
+}
+.top{
+    background-color: green;
+    transform: rotateX(90deg) translateZ(100px);
+}
+.bottom{
+    background-color: yellow;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.left{
+    background-color: deeppink;
+    transform: rotateY(90deg) translateZ(100px);
+}
+.right{
+    background-color: orange;
+    transform: rotateY(-90deg) translateZ(100px);
+}
